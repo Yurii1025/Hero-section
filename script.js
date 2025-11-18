@@ -6,12 +6,12 @@ function documentActions(e) {
     const targetElement = e.target;
 
     if (targetElement.closest('.icon-menu')) {             /*step 2*/
-        document.documentElement.classList.toggle('menu-open');     /*создаем класс menu-open*/
+        document.documentElement.classList.toggle('menu-open');
     }
 
     if (targetElement.closest('[data-goto]')) {
-        document.documentElement.classList.contains('menu-open') ?              /*при выборе пункта меню закрывается*/
-            document.documentElement.classList.remove('menu-open') : null;      /*при выборе пункта меню закрывается*/
+        document.documentElement.classList.contains('menu-open') ?
+            document.documentElement.classList.remove('menu-open') : null;
         const goTo = targetElement.closest('[data-goto]').dataset.goto;
         const goToElement = document.querySelector(goTo);
         const headerHeight = document.querySelector('.header').offsetHeight;
@@ -22,6 +22,6 @@ function documentActions(e) {
                 behavior: "smooth"
             });
         }
-        e.preventDefault();         /*На этом моменте уже работают ссылки меню*/
+        e.preventDefault();
     }
 }
