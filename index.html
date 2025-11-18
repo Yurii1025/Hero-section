@@ -7,23 +7,31 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <main class="main_container">
         <header class="header">
-            <div class="logo">Datamaskinen din</div>
-            <div class="header_menu">
-                <ul class="list_container">
-                    <li class="list_item">
-                        <a href="#">Hjem</a>
-                    </li>
-                    <li class="list_item">
-                        <a href="#">Rabatter</a>
-                    </li>
-                    <li class="list_item">
-                        <a href="#">Om oss</a>
-                    </li>
-                </ul>
+            <div class="header_container">
+                <a href="#" class="header_logo">Datamaskinen din</a>
+                <nav class="header_menu menu">
+                    <div class="menu_body">
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a data-goto=".home" href="#" class="menu_link">Hjem</a>
+                            </li>
+                            <li class="menu_item">
+                                <a data-goto=".about" href="#" class="menu_link">Rabatter</a>
+                            </li>
+                            <li class="menu_item">
+                                <a data-goto=".products" href="#" class="menu_link">Om oss</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="menu_icon icon-menu" type="button">
+                        <span class="icon_menu-line"></span>
+                    </button>
+                </nav>
             </div>
         </header>
         <section class="hero_section">
